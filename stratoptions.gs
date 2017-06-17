@@ -1,4 +1,28 @@
 /**
+ * @OnlyCurrentDoc
+ */
+
+function onOpen() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var entries = [{ name : "Update", functionName : "updateData" },
+                 { name : "Clear", functionName : "clearData" }]
+  sheet.addMenu("Settings", entries);
+}
+
+function updateData(){
+  SpreadsheetApp.getActiveSpreadsheet().getRange("S2").setValue(new Date())
+}
+
+function clearData(){
+  const d = new Date()
+  SpreadsheetApp.getActiveSpreadsheet().getRange("A2").setValue("")
+  SpreadsheetApp.getActiveSpreadsheet().getRange("H2").setValue(2)
+  SpreadsheetApp.getActiveSpreadsheet().getRange("G2").setValue(new Date(d.getYear(), d.getMonth(), d.getDate()+7, 15, 30, 0))
+  SpreadsheetApp.getActiveSpreadsheet().getRange("B6:G15").setValue("")
+  SpreadsheetApp.getActiveSpreadsheet().getRange("S2").setValue(d)
+}
+
+/**
 Get list of options expiry dates
 @customFunction
 */
