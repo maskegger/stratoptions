@@ -9,4 +9,6 @@ StratOptions for Google Script enables you to analyse payoff graphs and track po
 5. Choose symbol and enter strategy legs to get started. 
 6. Goto "Settings" > "Update" to refesh price data.
 
+## Video walkthrough
+
 [![Youtube Thumbnail](https://github.com/uptickr/stratoptions/blob/master/resources/thumbnail.jpg)](https://www.youtube.com/watch?v=4wz6lgDKyHw)
