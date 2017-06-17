@@ -22,6 +22,7 @@ function clearData(){
   SpreadsheetApp.getActiveSpreadsheet().getRange("S2").setValue(d)
 }
 
+
 /**
 Get list of options expiry dates
 @customFunction
@@ -152,16 +153,6 @@ function _getMargin(symbol, lotsize, lots, expiries, strikes, call_or_put, _){
   if ([symbol].length != 1) return "Invalid Symbol"
   else if ([lotsize].length != 1 || typeof lotsize != "number" ) return "Invalid Lot Size"
   lots = lots.filter(function(x) { return /\S/.test(x) })
-  expiries = expiries.filter(function(x) { return /\S/.test(x) })
-  strikes = strikes.filter(function(x) { return /\S/.test(x) })
-  call_or_put = call_or_put.filter(function(x) { return /\S/.test(x) })
-  const inputs = [lots, expiries, strikes, call_or_put]
-  var sum = 0
-  for (i=0; i<4; i++){
-    if (typeof inputs[i] == "string") sum += 1
-    else if (typeof inputs[i] == "object") sum += inputs[i].length
-  }
-  if (sum % 4 != 0 || inputs.length != 4) return "Invalid Inputs"
   var data = []
   for (var i=0; i<lots.length; i++){
     date = new Date(expiries[i])
