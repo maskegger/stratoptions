@@ -6,7 +6,8 @@ StratOptions for Google Script enables you to analyse payoff graphs and track po
 2. Copy the code in the stratoptions.gs file. Go to "Tools" > "Script editor..." and paste the code there.
 3. Save the script project giving it a name, say StratOptionsGS.
 4. Reload the spreadsheet file to enable new menu items. 
-5. Enter strategy legs to get stared. Goto "Settings" > "Update" to refesh price data. 
+5. Choose symbol and enter strategy legs to get stared. 
+6. Goto "Settings" > "Update" to refesh price data.
 
 
 
