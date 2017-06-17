@@ -1,4 +1,4 @@
-# stratoptions
+# StratOptions
 Enables Options Payoffs, Strategy Analysis and Position Tracking on Google Spreadsheets
 
 - Designed for options contracts available on the National Stock Exchange of India
